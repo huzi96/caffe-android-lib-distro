@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+alias readlink=greadlink
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 set -e
 
 if [ -z "$NDK_ROOT" ] && [ "$#" -eq 0 ]; then
@@ -14,8 +16,10 @@ fi
 WD=$(readlink -f "$(dirname "$0")")
 cd "${WD}"
 
-export ANDROID_ABI="${ANDROID_ABI:-"arm64-v8a"}"
-export N_JOBS=${N_JOBS:-1}
+# export ANDROID_ABI="${ANDROID_ABI:-"arm64-v8a"}"
+export ANDROID_ABI="${ANDROID_ABI:-"armeabi"}"
+export N_JOBS=4
+#${N_JOBS:-1}
 
 if ! ./scripts/build_openblas.sh ; then
     echo "Failed to build OpenBLAS"

@@ -12,7 +12,7 @@ fi
 
 ANDROID_ABI=${ANDROID_ABI:-"armeabi-v7a with NEON"}
 WD=$(readlink -f "`dirname $0`/..")
-N_JOBS=${N_JOBS:-4}
+N_JOBS=${N_JOBS:4}
 CAFFE_ROOT=${WD}/caffe
 BUILD_DIR=${CAFFE_ROOT}/build
 

@@ -1,0 +1,17 @@
+***************
+*** 25,31 ****
+  #include <utility>
+  
+  #if defined(__ANDROID__)
+- #include <asm/page.h> // http://code.google.com/p/android/issues/detail?id=39983
+  #endif
+  
+  #include <pthread.h>
+--- 25,31 ----
+  #include <utility>
+  
+  #if defined(__ANDROID__)
++ #include <limits.h> // http://code.google.com/p/android/issues/detail?id=39983
+  #endif
+  
+  #include <pthread.h>

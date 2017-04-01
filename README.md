@@ -33,10 +33,7 @@ Any comments, issues or PRs are welcomed.
 Thanks.
 
 ## TODO
-- [ ] integrate using CMake's ExternalProject
-- [ ] add IO dependency support (i.e., leveldb and hdf5)
-- [ ] OpenCL support
-- [ ] CUDA suuport
+- [ ] Code cleaning and minor bug fix.]
 
 ## Optional
 `.envrc` files are for [direnv](http://direnv.net/)
